@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  @mixin atMedium {
+    &__medium-4 {
+      flex: 1 1 33.33%;
+      &--larger {
+        flex: 1 1 37%;
+      }
+    }
+    &__medium-8 {
+      flex: 1 1 66.66%;
+      &--smaller {
+        flex: 1 1 63%;
+      }
+    }
+    &--gutters > div:not(:last-child) {
+      padding-right: 65px;
+    }
+  }
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+}
