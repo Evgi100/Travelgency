@@ -1,6 +1,7 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  flex: 1;
 
   @mixin atMedium {
     &__medium-4 {
@@ -9,17 +10,62 @@
         flex: 1 1 37%;
       }
     }
+    &__medium-6 {
+      flex: 33.33%;
+    }
     &__medium-8 {
       flex: 1 1 66.66%;
       &--smaller {
         flex: 1 1 63%;
       }
     }
+    &--gutters-lg > div:not(:last-child) {
+      padding-right: 100px;
+    }
+    &--gutters-small > div:not(:last-child) {
+      margin-right: 45px;
+    }
     &--gutters > div:not(:last-child) {
       padding-right: 65px;
     }
+    &--b-margin-until-medium {
+      margin-bottom: 1rem;
+    }
   }
-  &__b-margin-until-medium {
-    margin-bottom: 1rem;
+
+  @mixin atLarge {
+    &__large-6 {
+      flex: 33.33%;
+    }
+    &__large-4 {
+      flex: 1 1 33.33%;
+      &--larger {
+        flex: 1 1 37%;
+      }
+    }
+    &--b-margin-until-large {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &--equal-height-medium {
+    @mixin atMedium {
+      margin: auto;
+    }
+    & > div {
+      display: flex;
+    }
+  }
+  &--equal-height-large {
+    @mixin atLarge {
+      margin: auto;
+    }
+    & > div {
+      display: flex;
+    }
+  }
+
+  &--top-padding {
+    padding-top: 80px;
   }
 }
