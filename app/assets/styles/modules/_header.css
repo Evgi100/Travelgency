@@ -76,7 +76,7 @@
       cursor: pointer;
     }
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -105,7 +105,7 @@
       -o-transition: opacity 0.3s ease-out;
     }
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
