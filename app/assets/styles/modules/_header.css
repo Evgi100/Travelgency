@@ -3,16 +3,16 @@
   z-index: 1;
   transition: background-color 0.3s ease-out;
   width: 100%;
-  &--is-expanded: ;
-  -webkit-transition: background-color 0.3s ease-out;
-  -moz-transition: background-color 0.3s ease-out;
-  -ms-transition: background-color 0.3s ease-out;
-  -o-transition: background-color 0.3s ease-out;
-   {
+  &--is-expanded {
     background-color: rgba(47, 85, 114, 0.3);
   }
   @mixin atMedium {
+    position: fixed;
     background-color: rgba(47, 85, 114, 0.3);
+
+    &--dark {
+      background-color: rgba(23, 51, 72, 0.85);
+    }
   }
 
   &__button-container {
@@ -27,6 +27,7 @@
     background-color: $mainBlue;
     padding: 25px 36px;
     left: 50%;
+    transition: transform 0.3 ease-out;
     transform: translateX(-50%) scale(0.8);
     -webkit-transform: translateX(-50%) scale(0.8);
     -moz-transform: translateX(-50%) scale(0.8);
@@ -34,12 +35,16 @@
     -o-transform: translateX(-50%) scale(0.8);
 
     @mixin atMedium {
-      left: 0;
+      left: auto;
       transform: translate(0);
       -webkit-transform: translate(0);
       -moz-transform: translate(0);
       -ms-transform: translate(0);
       -o-transform: translate(0);
+
+      .header--dark & {
+        transform: translateY(-25%) scale(0.57);
+      }
     }
   }
 

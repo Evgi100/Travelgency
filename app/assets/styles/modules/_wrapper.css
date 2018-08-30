@@ -4,6 +4,10 @@
   max-width: 1236px;
   margin: 0 auto;
   overflow: hidden;
+
+  &--narrow {
+    max-width: 470px;
+  }
   &--medium {
     max-width: 976px;
   }
